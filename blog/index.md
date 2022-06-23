@@ -1,11 +1,10 @@
 ---
 layout: page
 title: Blog
-excerpt: 'Origin Stories'
+excerpt: 'New Features and Announcements'
 search_omit: true
 ---
 
-Sustainable Solutions for Smart City Projects
 
 <ul class="post-list">
 {% for post in site.categories.blog %}

@@ -1,15 +1,6 @@
-# [S Labs Solutions](https://slabs.tech/)
+# revive
 
 
-### Portfolio site of S Labs Solutions
+Docs for Revive Project
 
-Helping Dev's build Fast, Clean, Secure and Robust Features.
-
-* Technology Blog
-* Plugin's
-* Sample Code 
-* Consultation via Queries
-
-
-
-Theme Courtesy- Michael Rose [So Simple -  Jekyll Plugin](https://mmistakes.github.io/minimal-mistakes/)
+MIT License
