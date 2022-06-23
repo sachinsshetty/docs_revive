@@ -1,0 +1,11 @@
+# Sample site navigation bar links
+
+- title: Blog
+  url: /blog/
+
+- title: Consult
+  url: /consult/
+
+- title: Art
+  url: /art/
+
