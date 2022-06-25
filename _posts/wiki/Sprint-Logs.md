@@ -11,6 +11,11 @@ date: 2022-06-23T08:08:50-04:00
 
 # Sprint Logs 
 
+# okta Auth
+ * https://developer.okta.com/blog/2017/10/27/secure-spa-spring-boot-oauth#get-your-oauth-info-ready
+ * https://developer.okta.com/blog/2018/03/21/dropwizard-oauth
+ * https://github.com/na703/DropwizardRethinkDB/blob/master/pom.xml
+
 # JetBrains - IntelliJ Plugin
  * Create Repo from Template - https://github.com/JetBrains/intellij-platform-plugin-template
  * Sign the Plugin - https://plugins.jetbrains.com/docs/intellij/plugin-signing.html
