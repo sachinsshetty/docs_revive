@@ -12,10 +12,15 @@ date: 2022-06-26T08:08:50-04:00
 
 # Sprint Logs 
 
+* Sprint 6
+
 # okta Auth
  * https://developer.okta.com/blog/2017/10/27/secure-spa-spring-boot-oauth#get-your-oauth-info-ready
  * https://developer.okta.com/blog/2018/03/21/dropwizard-oauth
  * https://github.com/na703/DropwizardRethinkDB/blob/master/pom.xml
+
+
+* Sprint 5 
 
 # JetBrains - IntelliJ Plugin
  * Create Repo from Template - https://github.com/JetBrains/intellij-platform-plugin-template
@@ -26,6 +31,8 @@ date: 2022-06-26T08:08:50-04:00
    * 
  * tutorial video - https://www.youtube.com/watch?v=vAlor5-hC0Q
 
+
+* Sprint 4
 
 # version 8
 * Gradle Dropwizard
@@ -90,7 +97,7 @@ date: 2022-06-26T08:08:50-04:00
  - https://www.docker.com/blog/docker-compose-from-local-to-amazon-ecs/
 
 
-
+* Sprint 3
 
 * Install Docker CLI 
 
@@ -250,6 +257,7 @@ Init DB ;
 
 
 
+Sprint 2
 
 # Version 2
 
@@ -280,6 +288,10 @@ Source for steps
 
 	* https://github.com/eugenp/tutorials/blob/master/spring-boot-modules/spring-boot-bootstrap/src/main/java/com/baeldung/web/exception/BookIdMismatchException.java
 	https://www.baeldung.com/spring-5-junit-config
+
+
+
+Sprint 1
 
 * Junit - 
 	* https://www.baeldung.com/junit-5-gradle

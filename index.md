@@ -22,6 +22,7 @@ entries_layout: list
 
 
 ##### Execution Steps :
+
 | Step                                           | Command                                 | Description                             |
 |------------------------------------------------|-----------------------------------------|-----------------------------------------|
 | Run Chess                                      | gradle runChess                         | To run Chess Monolith Application       |
