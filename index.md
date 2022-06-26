@@ -5,19 +5,27 @@ show_excerpts: true
 entries_layout: list
 ---
 
+<img src="https://github.com/sachinsshetty/revive/actions/workflows/cicd.yml/badge.svg" alt="Build Status">
+
+<img src="https://github.com/sachinsshetty/revive/actions/workflows/chess.yml/badge.svg" alt="Chess">
+
+<img src="https://github.com/sachinsshetty/revive/actions/workflows/codeql-analysis.yml/badge.svg" alt="CodeQL Status">
 
 
-| Docker Image        | Docker Hub Repo                                                                                     | Github Package Registry                                                                                       |     Size(Mb)                                       | Status                                                                        |
-|---------------------|-----------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|-------------------------------------------------------------------------------|
-| Server - SpringBoot | [slabstech/revive-server-spring-boot](https://hub.docker.com/r/slabstech/revive-server-spring-boot) | [revive-server-spring-boot](https://github.com/sachinsshetty/revive/pkgs/container/revive-server-spring-boot) |157.3    | ![SpringBoot](https://github.com/sachinsshetty/revive/actions/workflows/push_docker_server_spring_boot.yml/badge.svg) |
-| Server - Dropwizard | [slabstech/revive-server-dropwizard](https://hub.docker.com/r/slabstech/revive-server-dropwizard)   | [revive-server-dropwizard](https://github.com/sachinsshetty/revive/pkgs/container/revive-server-dropwizard)   |109.2    | ![Dropwizard](https://github.com/sachinsshetty/revive/actions/workflows/push_docker_server_dropwizard.yml/badge.svg)|
-| Client - ReactJS    | [slabstech/revive-client-reactjs](https://hub.docker.com/r/slabstech/revive-client-reactjs)         | [revive-client-reactjs](https://github.com/sachinsshetty/revive/pkgs/container/revive-client-reactjs)         |54.13    | ![ReactJS](https://github.com/sachinsshetty/revive/actions/workflows/push_docker_client_reactjs.yml/badge.svg) |
-| DB - PostgreSQL     | [slabstech/revive-db-postgresql](https://hub.docker.com/r/slabstech/revive-db-postgresql)           | [revive-db-postgresql](https://github.com/sachinsshetty/revive/pkgs/container/revive-db-postgresql)           |80.07    | ![PostgreSQL](https://github.com/sachinsshetty/revive/actions/workflows/push_docker_db_postgresql.yml/badge.svg) |
+| Docker Image        | Docker Hub Repo                                                                                     | Github Package Registry                                                                                       | Size(Mb)   |
+|---------------------|-----------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|------------|
+| Chess               | [slabstech/revive-chess](https://hub.docker.com/r/slabstech/revive-chess)                           | [revive-server-spring-boot](https://github.com/sachinsshetty/revive/pkgs/container/revive-chess)              | 148        |
+| Server - SpringBoot | [slabstech/revive-server-spring-boot](https://hub.docker.com/r/slabstech/revive-server-spring-boot) | [revive-server-spring-boot](https://github.com/sachinsshetty/revive/pkgs/container/revive-server-spring-boot) | 157.3      |
+| Server - Dropwizard | [slabstech/revive-server-dropwizard](https://hub.docker.com/r/slabstech/revive-server-dropwizard)   | [revive-server-dropwizard](https://github.com/sachinsshetty/revive/pkgs/container/revive-server-dropwizard)   | 109.2      |
+| Client - ReactJS    | [slabstech/revive-client-reactjs](https://hub.docker.com/r/slabstech/revive-client-reactjs)         | [revive-client-reactjs](https://github.com/sachinsshetty/revive/pkgs/container/revive-client-reactjs)         | 54.13      |
+| DB - PostgreSQL     | [slabstech/revive-db-postgresql](https://hub.docker.com/r/slabstech/revive-db-postgresql)           | [revive-db-postgresql](https://github.com/sachinsshetty/revive/pkgs/container/revive-db-postgresql)           | 80.07      |
 
 
 ##### Execution Steps :
-| Step                                           | Command                                    | Description                             |
-|------------------------------------------------|--------------------------------------------|-----------------------------------------|
+| Step                                           | Command                                 | Description                             |
+|------------------------------------------------|-----------------------------------------|-----------------------------------------|
+| Run Chess                                      | gradle runChess                         | To run Chess Monolith Application       |
+| Build Chess                                    | gradle buildChess                       | To build Chess Application              |
 | Build Image: SpringBoot + PostgreSQL + ReactJS | gradle createAppDockerImages_springboot | To compile code and build docker images |
 | Build Image: Dropwizard + PostgreSQL + ReactJS | gradle createAppDockerImages_dropwizard | To compile code and build docker images |
 | Run: SpringBoot + PostgreSQL + ReactJS         | gradle runAppDocker_springboot          | To run with docker-compose              |
@@ -26,30 +34,43 @@ entries_layout: list
 | Stop: Dropwizard + PostgreSQL + ReactJS        | gradle stopAppDocker_dropwizard         | To Stop Docker Run                      |
 | Run : Spring Boot Server                       | gradle runSpringBootServer              | Run Server Spring Boot                  |
 | Run : ReactJS Client                           | gradle runReactJSClient                 | Run Client ReactJS                      |
-| Run : Dropwizard Server                        | gradle runDropwizardServer      | Run Server Dropwizard                   |
+| Run : Dropwizard Server                        | gradle runDropwizardServer              | Run Server Dropwizard                   |
 
-* Access the application at localhost:3000
+* Access the Chess Application at localhost:8081
 
+# Chess 
+* Docker 
+  * In base folder
+    * docker build -t slabstech/chess:0.0.1 -f chess/Dockerfile .
 
-#### Important Links
-* Documents maintained at Wiki - [https://github.com/sachinsshetty/revive/wiki](https://github.com/sachinsshetty/revive/wiki)
+    * docker container run slabstech/chess:0.0.1
+    
+* Maven
+  * mvn clean install
+  * java -jar chess/app-0.0.1.jar server chess/config.yml
 
-| Description       | Document                                                                |
-|-------------------|-------------------------------------------------------------------------|
-| For Build steps   | [Build](https://github.com/sachinsshetty/revive/wiki/Build)             |
-| For Release notes | [Releases](https://github.com/sachinsshetty/revive/wiki/Release)        |
-| FAQs              | [FAQ](https://github.com/sachinsshetty/revive/wiki/Project-Demo-Revive) |
-| For Sprint Task   | [Sprint](https://github.com/sachinsshetty/revive/wiki/Sprint)           |
-| For Sprint Logs   | [Sprint_logs](https://github.com/sachinsshetty/revive/wiki/Sprint-Logs) |
-| Project roadmap   | [Roadmap](https://github.com/sachinsshetty/revive/projects/1)           |
+* Gradle
+  * In based folder
+    * gradle buildChess
+    * gradle runChess
+  
+
+| Description       | Document                                                                     |
+|-------------------|------------------------------------------------------------------------------|
+| For Build steps   | [Build](https://sachinsshetty.github.io/docs_revive/wiki/Build)              |
+| For Release notes | [Releases](https://sachinsshetty.github.io/docs_revive/wiki/Release)         |
+| FAQs              | [FAQ](https://sachinsshetty.github.io/docs_revive/wiki/Project-Demo-Revive)  |
+| For Sprint Task   | [Sprint](https://sachinsshetty.github.io/docs_revive//wiki/Sprint)           |
+| For Sprint Logs   | [Sprint_logs](https://sachinsshetty.github.io/docs_revive//wiki/Sprint-Logs) |
+| Project roadmap   | [Roadmap](https://github.com/sachinsshetty/revive/projects/1)                |
 
 
 #### Tech Stack
 
 | Version | Client  | Server     | Database   | Cloud Deploy |
 |---------|---------|------------|------------|--------------|
-| 0.0.1   | ReactJS | SpringBoot | PostgreSQL | MS Azure   |
-| 0.0.2   | ---     | DropWizard | ---        | AWS     |
+| 0.0.1   | ReactJS | Dropwizard | PostgreSQL | MS Azure     |
+
 
 
 | Tech                 | Version | Status  | Use Case                  | App Version                                                           |
@@ -72,9 +93,7 @@ entries_layout: list
 
 #### Sponsors
 
-
 Revive is awaiting Sponsors for creating more templates
-
 
 #### Currently being develops with
 
