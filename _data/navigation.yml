@@ -1,5 +1,9 @@
 # Sample site navigation bar links
+- title: Wiki
+  url: /wiki/
 
 - title: Blog
   url: /blog/
 
+- title: Search
+  url: /search/
