@@ -58,11 +58,11 @@ entries_layout: list
 
 | Description       | Document                                                                     |
 |-------------------|------------------------------------------------------------------------------|
-| For Build steps   | [Build](https://sachinsshetty.github.io/docs_revive/wiki/Build)              |
-| For Release notes | [Releases](https://sachinsshetty.github.io/docs_revive/wiki/Release)         |
-| FAQs              | [FAQ](https://sachinsshetty.github.io/docs_revive/wiki/Project-Demo-Revive)  |
-| For Sprint Task   | [Sprint](https://sachinsshetty.github.io/docs_revive//wiki/Sprint)           |
-| For Sprint Logs   | [Sprint_logs](https://sachinsshetty.github.io/docs_revive//wiki/Sprint-Logs) |
+| For Build steps   | [Build](https://sachinsshetty.github.io/docs_revive/wiki/build)              |
+| For Release notes | [Releases](https://sachinsshetty.github.io/docs_revive/wiki/release)         |
+| FAQs              | [FAQ](https://sachinsshetty.github.io/docs_revive/wiki/project-demo)  |
+| For Sprint Task   | [Sprint](https://sachinsshetty.github.io/docs_revive/wiki/sprint)           |
+| For Sprint Logs   | [Sprint_logs](https://sachinsshetty.github.io/docs_revive/wiki/sprint-Logs) |
 | Project roadmap   | [Roadmap](https://github.com/sachinsshetty/revive/projects/1)                |
 
 
