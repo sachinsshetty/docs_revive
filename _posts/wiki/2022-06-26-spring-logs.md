@@ -13,6 +13,9 @@ date: 2022-06-26T08:08:50-04:00
 # Sprint Logs 
 
 * Sprint 6
+# Retrofit HTTP library
+ * https://github.com/eugenp/tutorials/tree/master/libraries-http
+ * https://www.baeldung.com/retrofit
 
 # okta Auth
  * https://developer.okta.com/blog/2017/10/27/secure-spa-spring-boot-oauth#get-your-oauth-info-ready
