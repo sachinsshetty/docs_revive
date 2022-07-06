@@ -5,16 +5,13 @@ show_excerpts: true
 entries_layout: list
 ---
 
-<img src="https://github.com/sachinsshetty/revive/actions/workflows/cicd.yml/badge.svg" alt="Build Status">
 
-<img src="https://github.com/sachinsshetty/revive/actions/workflows/chess.yml/badge.svg" alt="Chess">
-
-<img src="https://github.com/sachinsshetty/revive/actions/workflows/codeql-analysis.yml/badge.svg" alt="CodeQL Status">
+<img src="https://github.com/sachinsshetty/revive/actions/workflows/revive.yml/badge.svg" alt="Chess">
 
 
 | Docker Image        | Docker Hub Repo                                                                                     | Github Package Registry                                                                                       | Size(Mb)   |
 |---------------------|-----------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|------------|
-| Chess               | [slabstech/revive-chess](https://hub.docker.com/r/slabstech/revive-chess)                           | [revive-server-spring-boot](https://github.com/sachinsshetty/revive/pkgs/container/revive-chess)              | 148        |
+| Kotlin - Dropwizard | [slabstech/revive-all](https://hub.docker.com/r/slabstech/revive-all)                               | [revive-all](https://github.com/sachinsshetty/revive/pkgs/container/revive-all)                               | 148        |
 | Server - SpringBoot | [slabstech/revive-server-spring-boot](https://hub.docker.com/r/slabstech/revive-server-spring-boot) | [revive-server-spring-boot](https://github.com/sachinsshetty/revive/pkgs/container/revive-server-spring-boot) | 157.3      |
 | Server - Dropwizard | [slabstech/revive-server-dropwizard](https://hub.docker.com/r/slabstech/revive-server-dropwizard)   | [revive-server-dropwizard](https://github.com/sachinsshetty/revive/pkgs/container/revive-server-dropwizard)   | 109.2      |
 | Client - ReactJS    | [slabstech/revive-client-reactjs](https://hub.docker.com/r/slabstech/revive-client-reactjs)         | [revive-client-reactjs](https://github.com/sachinsshetty/revive/pkgs/container/revive-client-reactjs)         | 54.13      |
@@ -23,38 +20,24 @@ entries_layout: list
 
 ##### Execution Steps :
 
-| Step                                           | Command                                 | Description                             |
-|------------------------------------------------|-----------------------------------------|-----------------------------------------|
-| Run Chess                                      | gradle runChess                         | To run Chess Monolith Application       |
-| Build Chess                                    | gradle buildChess                       | To build Chess Application              |
-| Build Image: SpringBoot + PostgreSQL + ReactJS | gradle createAppDockerImages_springboot | To compile code and build docker images |
-| Build Image: Dropwizard + PostgreSQL + ReactJS | gradle createAppDockerImages_dropwizard | To compile code and build docker images |
-| Run: SpringBoot + PostgreSQL + ReactJS         | gradle runAppDocker_springboot          | To run with docker-compose              |
-| Run: Dropwizard + PostgreSQL + ReactJS         | gradle runAppDocker_dropwizard          | To run with docker-compose              |
-| Stop: SpringBoot + PostgreSQL + ReactJS        | gradle stopAppDocker_springboot         | To Stop Docker Run                      |
-| Stop: Dropwizard + PostgreSQL + ReactJS        | gradle stopAppDocker_dropwizard         | To Stop Docker Run                      |
-| Run : Spring Boot Server                       | gradle runSpringBootServer              | Run Server Spring Boot                  |
-| Run : ReactJS Client                           | gradle runReactJSClient                 | Run Client ReactJS                      |
-| Run : Dropwizard Server                        | gradle runDropwizardServer              | Run Server Dropwizard                   |
+| Step                                           | Command                                          | Description                                   |
+|------------------------------------------------|--------------------------------------------------|-----------------------------------------------|
+| Run Kotlin-Dropwizard                          | java -jar target/app-0.0.1.jar config.yml server | To run Kotlin Dropwizard Monolith Application |
+| Build Kotlin-Dropwizard                        | mvn clean install                                | To build Kotlin Dropwizard Application        |
 
-* Access the Chess Application at localhost:8081
+* Access the Application at localhost:8081
 
-# Chess 
+#### Kotlin-Dropwizard 
 * Docker 
   * In base folder
-    * docker build -t slabstech/chess:0.0.1 -f chess/Dockerfile .
+    * docker build -t slabstech/revive-all:0.0.1 -f Dockerfile .
 
-    * docker container run slabstech/chess:0.0.1
+    * docker container run slabstech/revive-all:0.0.1
     
 * Maven
   * mvn clean install
-  * java -jar chess/app-0.0.1.jar server chess/config.yml
+  * java -jar target/app-0.0.1.jar server config.yml
 
-* Gradle
-  * In based folder
-    * gradle buildChess
-    * gradle runChess
-  
 
 | Description       | Document                                                                     |
 |-------------------|------------------------------------------------------------------------------|
@@ -76,7 +59,7 @@ entries_layout: list
 
 | Tech                 | Version | Status  | Use Case                  | App Version                                                           |
 |----------------------|---------|---------|---------------------------|-----------------------------------------------------------------------|
-| Java                 | 17      | Done    | Programming Language      | [v0.0.1](https://github.com/sachinsshetty/revive/releases/tag/v0.0.1) |
+| kotlin               | --      | Done    | Programming Language      | [v0.0.1](https://github.com/sachinsshetty/revive/releases/tag/v0.0.1) |
 | JUnit                | 4       | Done    | Unit/Integration Test     | [v0.0.1](https://github.com/sachinsshetty/revive/releases/tag/v0.0.1) |
 | git + Github Actions | 2.34.1  | Done    | Version Control, CI/CD    | [v0.0.1](https://github.com/sachinsshetty/revive/releases/tag/v0.0.1) |
 | Docker               | 20      | Done    | Micro services deployment | [v0.0.1](https://github.com/sachinsshetty/revive/releases/tag/v0.0.1) |
