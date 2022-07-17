@@ -2,7 +2,7 @@ remote_theme: "mmistakes/so-simple-theme"
 locale: en-US
 title: "Revive Docs"
 description: "Documentation for Revive Project"
-url: "https://sachinsshetty.github.io/docs_revive"
+url: "https://slabstech.com/docs_revive"
 date_format: "%B %-d, %Y"
 read_time: # reading time estimates, e.g. true
 words_per_minute: # 200
